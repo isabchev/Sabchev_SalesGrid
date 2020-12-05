@@ -1,0 +1,9 @@
+<?xml version="1.0"?>
+<config>
+    <modules>
+        <Sabchev_SalesGrid>
+            <active>true</active>
+            <codePool>local</codePool>
+        </Sabchev_SalesGrid>
+    </modules>
+</config> 

@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<config>
+    <modules>
+        <Sabchev_SalesGrid>
+            <version>0.1.0</version>
+        </Sabchev_SalesGrid>
+    </modules>
+    <global>
+        <models>
+            <sabchev_salesgrid>
+                <class>Sabchev_SalesGrid_Model</class>
+            </sabchev_salesgrid>
+        </models>
+        <blocks>
+            <sabchev_salesgrid>
+                <class>Sabchev_Salesgrid_Block</class>
+            </sabchev_salesgrid>
+        </blocks>
+        <events>
+            <sales_order_place_after>
+                <observers>
+                    <sabchev_salesgrid>
+                        <model>sabchev_salesgrid/observer</model>
+                        <method>updateGridPostcode</method>
+                    </sabchev_salesgrid>
+                </observers>
+            </sales_order_place_after>
+        </events>
+        <resources>
+            <sabchev_salesgrid_setup>
+                <setup>
+                    <module>Sabchev_SalesGrid</module>
+                    <class>Mage_Sales_Model_Mysql4_Setup</class>
+                </setup>
+            </sabchev_salesgrid_setup>
+        </resources>
+    </global>
+    <adminhtml>
+        <layout>
+            <!-- layout upgrade configuration -->
+            <updates>
+                <gmi_salesgrid>
+                    <file>sabchev/salesgrid.xml</file>
+                </gmi_salesgrid>
+            </updates>
+        </layout>
+    </adminhtml>
+</config>

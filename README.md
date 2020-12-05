@@ -1,2 +1,1 @@
-# Sabchev_SalesGrid
-Magento 1 module adding shipping postcode column to grid
+Magento 1 module adding shipping postcode column to sales order grid
